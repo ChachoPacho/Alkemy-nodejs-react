@@ -1,0 +1,101 @@
+@apiTasks = http://localhost:3000
+
+
+//USERS
+PUT {{apiTasks}}/users
+Content-Type: application/json
+
+{
+    "email": "gonzalobordon02@hotmail.com",
+    "password": "123"
+}
+
+###
+PUT {{apiTasks}}/users/4
+Content-Type: application/json
+
+{
+    "email": "gonzalobordon02@hotmail.com",
+    "password": "1234",
+    "newPassword": "123"
+}
+
+###
+POST {{apiTasks}}/users
+Content-Type: application/json
+
+{
+    "email": "gonzalobordon02@hotmail.com",
+    "password": "123"
+}
+
+###
+DELETE  {{apiTasks}}/users/4
+Content-Type: application/json
+
+{
+    "email": "gonzalobordon02@hotmail.com",
+    "password": "123"
+}
+
+
+//OPERATIONS
+###
+POST {{apiTasks}}/operations
+Content-Type: application/json
+
+{
+    "email": "gonzalobordon02@hotmail.com",
+    "password": "123",
+    "idUser": 5
+}
+
+###
+POST {{apiTasks}}/operations/2
+Content-Type: application/json
+
+{
+    "email": "gonzalobordon02@hotmail.com",
+    "password": "123",
+    "idUser": 5
+}
+
+###
+POST {{apiTasks}}/operations/totals
+Content-Type: application/json
+
+{
+    "email": "gonzalobordon02@hotmail.com",
+    "password": "123",
+    "idUser": 5
+}
+
+###
+DELETE {{apiTasks}}/4
+###
+PUT {{apiTasks}}/operations
+Content-Type: application/json
+
+{
+    "email": "gonzalobordon02@hotmail.com",
+    "password": "123",
+    "concept_": "Chiringuito", 
+    "quantity_": "50", 
+    "date_": "2021-8-27",
+    "type_": 1,
+    "category_": null,
+    "idUser": 5
+}
+
+###
+PUT {{apiTasks}}/operations/3
+Content-Type: application/json
+
+{
+    "email": "gonzalobordon02@hotmail.com",
+    "password": "123",
+    "quantity_": "10000", 
+    "concept_": null,
+    "date_": null,
+    "idUser": 5
+}

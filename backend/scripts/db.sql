@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS alkemy;
+
+USE alkemy;
+
+CREATE TABLE IF NOT EXISTS operations(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    concept_ TEXT NOT NULL,
+    quantity_ REAL NOT NULL,
+    date_ DATE,
+    type_ BIT NOT NULL,
+    category_ VARCHAR(30),
+    idUser INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS users(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    email TEXT NOT NULL,
+    pass TEXT NOT NULL
+);
+
+ALTER TABLE operations ADD CONSTRAINT fk_userOpt FOREIGN KEY (idUser) REFERENCES users (id) ON DELETE CASCADE;
